@@ -2,10 +2,12 @@
 
 import pyinputplus as pyip
 
-print('Welcome! Please tell me what sandwich you would like')
+print("Welcome! Please tell me what sandwich you would like")
 # get bread type (wheat, white, sourdough)
-breadTypes = ('wheat', 'white', 'sourdough')
-breadType = pyip.inputMenu(breadTypes, prompt='What type of bread would you like?: \n')
+availableBreadTypes = ("wheat", "white", "sourdough")
+breadType = pyip.inputMenu(
+    availableBreadTypes, prompt="What type of bread would you like?: \n"
+)
 
 print(breadType)
 
