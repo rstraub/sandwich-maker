@@ -1,6 +1,9 @@
 #! python3
 
+import locale
 import pyinputplus as pyip
+
+locale.setlocale(locale.LC_ALL, "nl_NL")
 
 selectedItems = []
 
