@@ -26,8 +26,17 @@ if withCheese:
 availableToppings = ("mayo", "mustard", "lettuce", "tomato")
 selectedToppings = []  # TODO: saving the tougher one for last
 
+amountOfSandwiches = pyip.inputNum(
+    prompt="How many sandwiches would you like? \n", min=1
+)
+
 print(
-    selectedBreadType, selectedProteinType, withCheese, selectedCheese, selectedToppings
+    selectedBreadType,
+    selectedProteinType,
+    withCheese,
+    selectedCheese,
+    selectedToppings,
+    amountOfSandwiches,
 )
 
 # get protein type (chicken, turkey, ham, tofu)
