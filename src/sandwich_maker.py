@@ -43,8 +43,9 @@ amountOfSandwiches = pyip.inputNum(
 )
 
 totalPrice = 1.00
+formattedItems = ", ".join(selectedItems)
 result = f"""
-Great! {amountOfSandwiches} with {selectedItems} coming right up.
+Great! {amountOfSandwiches} sandwich(es) with {formattedItems} coming right up.
 That will cost you ${totalPrice}.
 """
 print(result)
