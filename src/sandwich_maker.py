@@ -9,7 +9,12 @@ breadType = pyip.inputMenu(
     availableBreadTypes, prompt="What type of bread would you like?: \n"
 )
 
-print(breadType)
+availableProteinTypes = ("chicken", "turkey", "ham", "tofu")
+proteinType = pyip.inputMenu(
+    availableProteinTypes, prompt="What type of protein would you like?: \n"
+)
+
+print(breadType, proteinType)
 
 # get protein type (chicken, turkey, ham, tofu)
 
