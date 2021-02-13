@@ -24,7 +24,13 @@ if withCheese:
     )
 
 availableToppings = ("mayo", "mustard", "lettuce", "tomato")
-selectedToppings = []  # TODO: saving the tougher one for last
+selectedToppings = []
+for topping in availableToppings:
+    withTopping = (
+        pyip.inputYesNo(prompt=f"Would you like {topping} with that?: \n") == "yes"
+    )
+    if withTopping:
+        selectedToppings.append(topping)
 
 amountOfSandwiches = pyip.inputNum(
     prompt="How many sandwiches would you like? \n", min=1
