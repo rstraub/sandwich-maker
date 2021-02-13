@@ -2,17 +2,21 @@
 
 import pyinputplus as pyip
 
+selectedItems = []
+
 print("Welcome! Please tell me what sandwich you would like")
 # get bread type (wheat, white, sourdough)
 availableBreadTypes = ("wheat", "white", "sourdough")
 selectedBreadType = pyip.inputMenu(
     availableBreadTypes, prompt="What type of bread would you like?: \n"
 )
+selectedItems.append(selectedBreadType)
 
 availableProteinTypes = ("chicken", "turkey", "ham", "tofu")
 selectedProteinType = pyip.inputMenu(
     availableProteinTypes, prompt="What type of protein would you like?: \n"
 )
+selectedItems.append(selectedProteinType)
 
 withCheese = pyip.inputYesNo(prompt="Would you like cheese with that? \n") == "yes"
 
@@ -22,6 +26,7 @@ if withCheese:
     selectedCheese = pyip.inputMenu(
         availableCheeses, prompt="What type of cheese would you like?: \n"
     )
+    selectedItems.append(selectedCheese)
 
 availableToppings = ("mayo", "mustard", "lettuce", "tomato")
 selectedToppings = []
@@ -31,19 +36,18 @@ for topping in availableToppings:
     )
     if withTopping:
         selectedToppings.append(topping)
+        selectedItems.append(topping)
 
 amountOfSandwiches = pyip.inputNum(
     prompt="How many sandwiches would you like? \n", min=1
 )
 
-print(
-    selectedBreadType,
-    selectedProteinType,
-    withCheese,
-    selectedCheese,
-    selectedToppings,
-    amountOfSandwiches,
-)
+totalPrice = 1.00
+result = f"""
+Great! {amountOfSandwiches} with {selectedItems} coming right up.
+That will cost you ${totalPrice}.
+"""
+print(result)
 
 # get protein type (chicken, turkey, ham, tofu)
 
