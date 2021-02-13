@@ -16,7 +16,14 @@ proteinType = pyip.inputMenu(
 
 withCheese = pyip.inputYesNo(prompt="Would you like cheese with that? \n") == "yes"
 
-print(breadType, proteinType, withCheese)
+availableCheeses = ("cheddar", "Swiss", "mozzarella")
+selectedCheese = None
+if withCheese:
+    selectedCheese = pyip.inputMenu(
+        availableCheeses, prompt="What type of cheese would you like?: \n"
+    )
+
+print(breadType, proteinType, withCheese, selectedCheese)
 
 # get protein type (chicken, turkey, ham, tofu)
 
