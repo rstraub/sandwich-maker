@@ -16,6 +16,11 @@ itemPrices = {
 }
 
 
+def calculateTotalPrice(selectedItems, amountOfSandwiches):
+    sandwichPrice = calculateSandwichPrice(selectedItems)
+    return amountOfSandwiches * sandwichPrice
+
+
 def calculateSandwichPrice(selectedItems):
     return sum(map(getItemPrice, selectedItems))
 
