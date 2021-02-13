@@ -5,12 +5,12 @@ import pyinputplus as pyip
 print("Welcome! Please tell me what sandwich you would like")
 # get bread type (wheat, white, sourdough)
 availableBreadTypes = ("wheat", "white", "sourdough")
-breadType = pyip.inputMenu(
+selectedBreadType = pyip.inputMenu(
     availableBreadTypes, prompt="What type of bread would you like?: \n"
 )
 
 availableProteinTypes = ("chicken", "turkey", "ham", "tofu")
-proteinType = pyip.inputMenu(
+selectedProteinType = pyip.inputMenu(
     availableProteinTypes, prompt="What type of protein would you like?: \n"
 )
 
@@ -23,7 +23,12 @@ if withCheese:
         availableCheeses, prompt="What type of cheese would you like?: \n"
     )
 
-print(breadType, proteinType, withCheese, selectedCheese)
+availableToppings = ("mayo", "mustard", "lettuce", "tomato")
+selectedToppings = []  # TODO: saving the tougher one for last
+
+print(
+    selectedBreadType, selectedProteinType, withCheese, selectedCheese, selectedToppings
+)
 
 # get protein type (chicken, turkey, ham, tofu)
 
