@@ -16,7 +16,7 @@ itemPrices = {
 }
 
 
-def calculateTotalPrice(selectedItems):
+def calculateSandwichPrice(selectedItems):
     return sum(map(getItemPrice, selectedItems))
 
 

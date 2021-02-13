@@ -1,7 +1,7 @@
 #! python3
 
 import pyinputplus as pyip
-from prices import calculateTotalPrice
+from prices import calculateSandwichPrice
 
 
 selectedItems = []
@@ -44,7 +44,7 @@ amountOfSandwiches = pyip.inputNum(
     prompt="How many sandwiches would you like? \n", min=1
 )
 
-totalPrice = calculateTotalPrice(selectedItems)
+totalPrice = calculateSandwichPrice(selectedItems)
 formattedItems = ", ".join(selectedItems)
 result = f"""
 Great! {amountOfSandwiches} sandwich(es) with {formattedItems} coming right up.
